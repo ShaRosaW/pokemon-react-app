@@ -7,15 +7,18 @@ export const Homepage = () => {
     const [pokemonData, setPokemonData] = useState(null);
     const [offset, setOffset] = useState(0);
 
+
     useEffect(() => {
         const getPokemons = async () => {
             try {
-                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`);
-                console.log(response.data.results)
+                const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
+                //console.log(response.data)
                 setPokemonData(response.data.results);
+
             }
             catch (e) {
-                console.log(e)
+                //console.log(e)
+
             }
         }
         getPokemons();
@@ -23,23 +26,29 @@ export const Homepage = () => {
 
     const getNext = () => {
         console.log("getNext");
-        setOffset(offset + 10);
+        setOffset(offset + 20);
     }
     const getPrevious = () => {
         console.log("getPrevious");
-        if ( offset !== 0 ) setOffset(offset - 10);
+        if ( offset !== 0 ) setOffset(offset - 20);
     }
 
     return (
         <>
-            <h1> Homepage Pokemon </h1>
+            <header>
+                <h1>Pokemon, gotta catch 'em all!!</h1>
+            </header>
             <div>
                 <NavButtons onNext={getNext} onPrevious={getPrevious}/>
             </div>
             <div>
                 {pokemonData && (
                     pokemonData.map(({name, url}) => {
-                        return <PokemonCard key={name} name={name} url={url}/>
+                        return <PokemonCard
+                            key={name}
+                            url={url}
+
+                        />
                     })
                 )}
             </div>
