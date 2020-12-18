@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { LoggedInProvider } from "./components/Atoms/contexts/LoggedInContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <LoggedInProvider>
+      <Router>
+         <App />
+      </Router>
+      </LoggedInProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
