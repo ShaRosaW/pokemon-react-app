@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { PokemonCard } from "../components/pokemonCard/PokemonCard";
 import { NavButtons } from "../components/navButtons/NavButtons";
+import './Homepage.css';
 
 export const Homepage = () => {
     const [pokemonData, setPokemonData] = useState(null);
@@ -26,22 +27,27 @@ export const Homepage = () => {
 
     const getNext = () => {
         console.log("getNext");
-        setOffset(offset + 20);
+        //if ( offset >= 1118 )
+            setOffset(offset + 20);
     }
     const getPrevious = () => {
-        console.log("getPrevious");
-        if ( offset !== 0 ) setOffset(offset - 20);
+        //console.log("getPrevious");
+        if ( offset !== 0 )
+            setOffset(offset - 20);
     }
 
     return (
         <>
-            <header>
+            <header className="header-pokemon">
                 <h1>Pokemon, gotta catch 'em all!!</h1>
             </header>
-            <div>
-                <NavButtons onNext={getNext} onPrevious={getPrevious}/>
+            <div className="nav-buttons">
+                <NavButtons disabled={offset === 1118} onNext={getNext}
+                            // disabled={offset === 0 }
+                            onPrevious={getPrevious}/>
+
             </div>
-            <div>
+            <main>
                 {pokemonData && (
                     pokemonData.map(({name, url}) => {
                         return <PokemonCard
@@ -51,7 +57,7 @@ export const Homepage = () => {
                         />
                     })
                 )}
-            </div>
+            </main>
         </>
     )
 }

@@ -4,8 +4,10 @@ import './NavButtons.css';
 export const NavButtons = ({onNext, onPrevious}) => {
     return (
         <div>
-            <button onClick={onPrevious}>Vorige</button>
-            <button onClick={onNext}>Volgende</button>
+            <button className="nav-buttons" onClick={onPrevious}>Vorige</button>
+            <button className="nav-buttons" onClick={onNext}>Volgende</button>
         </div>
     )
 }
+// disabled={offset === 0}
+// disabled={offset === 1118}

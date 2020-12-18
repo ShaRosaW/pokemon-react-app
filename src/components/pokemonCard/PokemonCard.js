@@ -10,7 +10,7 @@ export const PokemonCard = ({url}) => {
         const getPokemonData = async () => {
             try {
                 const response = await axios.get(`${url}`);
-                console.log(response.data);
+                //console.log(response.data);
                 setPokemonData(response.data);
                 setStatus("done loading")
             }
@@ -34,13 +34,12 @@ export const PokemonCard = ({url}) => {
         <>
             {pokemonData ? (<div>
                 <ul>
-                    <li><h2>{pokemonData.name}</h2></li>
-                    <li className="image">
-                    <h3><img src={pokemonData.sprites.front_default}
+                    <h2>{pokemonData.name}</h2>
+                    <h3 className="image">
+                    <img src={pokemonData.sprites.front_default}
                              alt={pokemonData.name}
                     />
                     </h3>
-                    </li>
                     <li>
                         <h4>Moves:</h4>
                         {pokemonData.moves.length}
