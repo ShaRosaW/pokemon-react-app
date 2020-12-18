@@ -1,8 +1,60 @@
 * {
+    padding: 0px;
+    margin: 0px;
+}
 
+.homepage {
+    font-family: Helvetica, Garamond, Arial;
+    background-color: hsl(36, 100%, 90%);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    width: auto;
 }
 
 .header-pokemon {
-    color: red;
+    color: hsl(0, 100%, 50%);
+    background-color: hsl(36, 100%, 90%);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    border-radius: inherit;
+    width: 250px;
+
+}
+.homepage h2 {
+    color: hsl(36, 100%, 90%);
+    background-color: cornflowerblue;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 10px;
 }
 
+/*.log-button {*/
+/*    color: cornflowerblue;*/
+/*    background-color: red;*/
+/*    font-size: 20px;*/
+/*    font-family: Helvetica, Garamond, Arial;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 0 0;*/
+/*    margin: 5px;*/
+/*}*/
+
+/*.nav-buttons {*/
+/*    color: cornflowerblue;*/
+/*    background-color: red;*/
+/*    font-size: 20px;*/
+/*    font-family: Helvetica, Garamond, Arial;*/
+/*    border: none;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 0 0;*/
+/*    margin: 5px;*/
+/*}*/
+
+.pokemon-data {
+    display: flex;
+    flex-wrap: wrap;
+}

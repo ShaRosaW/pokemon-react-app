@@ -4,7 +4,7 @@ import { PokemonCard } from "../pokemonCard/PokemonCard";
 import { NavButtons } from "../../Molecules/navigation/NavButtons";
 import './Homepage.css';
 import { LoggedInContext } from "../../Atoms/contexts/LoggedInContext";
-
+import image from '../../../assets/pokemon-header.png'
 
 export const Homepage = () => {
     const [pokemonData, setPokemonData] = useState(null);
@@ -17,7 +17,6 @@ export const Homepage = () => {
         const getPokemons = async () => {
             try {
                 const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
-                //console.log(response.data)
                 setPokemonData(response.data.results);
                 setStatus("done loading")
             } catch (e) {
@@ -47,11 +46,12 @@ export const Homepage = () => {
         return (
             <>
                 <div className="homepage">
-                    <header className="header-pokemon">
-                        <h1>Pokemon, gotta catch 'em all!!</h1>
-                    </header>
+                    <img className="header-pokemon" src={image} alt="header"/>
+                        <h2>
+                        Gotta catch 'em all!!
+                        </h2>
                     <div>
-                        <button onClick={() => loggedInData.setLoggedIn(true)}>
+                        <button className="log-button" onClick={() => loggedInData.setLoggedIn(true)}>
                             Inloggen
                         </button>
                     </div>

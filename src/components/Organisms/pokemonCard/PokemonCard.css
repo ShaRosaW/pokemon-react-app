@@ -1,19 +1,51 @@
 * {
 
 }
+.pokemon-card {
+    color: hsl(0, 0%, 0%);
+    background-color: cornflowerblue;
+    font-size: 10px;
+    font-weight: 300;
+    height: 250px;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    line-height: 1rem;
 
-h2 {
-    color: yellow;
 }
 
-ul {
-    font-family: Helvetica,Garamond;
-    color: #61dafb;
+.pokemon-card h2 {
+    color: hsl(51, 100%, 50%);
+    font-size: 25px;
+    font-weight: 300;
 }
+
+.pokemon-card img {
+    height: 80px;
+    width: 80px;
+}
+
+.pokemon-card h4 {
+    color: hsl(0, 100%, 50%);
+    font-size: 15px;
+    font-weight: 300;
+    display: flow;
+}
+
+
+/*ul abilities{*/
+/*    font-family: Helvetica,Garamond;*/
+/*    color: #61dafb;*/
+/*}*/
 
 .abilities {
-    color: blue;
+    color: hsl(51, 100%, 50%);
+    font-size: 10px;
+    font-weight: 300;
+    display: flow;
+    list-style: none;
 }
-h4 {
-    color: #61dafb;
-}
+/*h4 {*/
+/*    color: hsl(51, 100%, 50%);*/
+/*}*/

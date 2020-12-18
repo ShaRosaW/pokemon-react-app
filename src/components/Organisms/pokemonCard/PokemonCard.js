@@ -23,28 +23,22 @@ export const PokemonCard = ({url}) => {
         <>
             <div className="pokemon-card">
                 {pokemonData && (<div>
-                        <h2>{pokemonData.name}</h2>
-                            <img className="pokemon-img"
-                                 src={pokemonData.sprites.front_default}
-                                 alt={pokemonData.name}
-                            />
-                        <li>
-                            <h4>Moves:</h4>
-                            {pokemonData.moves.length}
-                        </li>
-                        <li>
-                            <h4>Weight:</h4>
-                            {pokemonData.weight}
-                        </li>
-                    <ul className="abilities">
-                        <li>
-                            <h4>Abilities:</h4>
-                        </li>
+                    <h2>{pokemonData.name}</h2>
+                        <img className="pokemon-img"
+                             src={pokemonData.sprites.front_default}
+                             alt={pokemonData.name}
+                        />
+                        <h4>Moves:</h4>
+                        {pokemonData.moves.length}
+                        <h4>Weight:</h4>
+                        {pokemonData.weight}
+                        <h4>Abilities:</h4>
+                        <ul className="abilities">
                         {pokemonData.abilities.map((ability) => {
                             return <li key={ability.ability.name}>
                                 {ability.ability.name}</li>
                         })}
-                    </ul>
+                        </ul>
                 </div>)}
 
             </div>

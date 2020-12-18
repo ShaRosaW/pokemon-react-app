@@ -1,20 +1,15 @@
-* {
-
-}
-
-.prev-button {
-    color: cornflowerblue;
-    background-color: red;
-    font-size: 20px;
+.nav-bar {
     font-family: Helvetica, Garamond, Arial;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 0;
-    margin: 15px;
-    padding: 5px;
+    background-color: hsl(36, 100%, 90%);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
 }
 
-.next-button {
+.log-button {
     color: cornflowerblue;
     background-color: red;
     font-size: 20px;

@@ -4,8 +4,8 @@ import './NavButtons.css';
 export const NavButtons = ({onNext, onPrevious}) => {
     return (
         <div>
-            <button className="nav-buttons" onClick={onPrevious}>Vorige</button>
-            <button className="nav-buttons" onClick={onNext}>Volgende</button>
+            <button className="prev-button" onClick={onPrevious}>Vorige</button>
+            <button className="next-button" onClick={onNext}>Volgende</button>
         </div>
     )
 }
