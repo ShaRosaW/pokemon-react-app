@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { LoggedInProvider } from "./components/Atoms/contexts/LoggedInContext";
+import { LoggedInProvider } from "./contexts/LoggedInContext";
 
 ReactDOM.render(
   <React.StrictMode>

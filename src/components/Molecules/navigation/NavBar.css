@@ -3,7 +3,7 @@
     background-color: hsl(36, 100%, 90%);
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
+    /*position: relative;*/
     flex-wrap: wrap;
     text-align: center;
     width: auto;

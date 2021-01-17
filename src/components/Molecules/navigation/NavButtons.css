@@ -2,26 +2,14 @@
 
 }
 
-.prev-button {
+.nav-buttons {
     color: cornflowerblue;
     background-color: red;
     font-size: 20px;
     font-family: Helvetica, Garamond, Arial;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 0;
-    margin: 15px;
-    padding: 5px;
-}
-
-.next-button {
-    color: cornflowerblue;
-    background-color: red;
-    font-size: 20px;
-    font-family: Helvetica, Garamond, Arial;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 0;
+    /*box-shadow: 0 0 0;*/
     margin: 15px;
     padding: 5px;
 }

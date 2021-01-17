@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { LoggedInContext } from "../../Atoms/contexts/LoggedInContext";
+import { LoggedInContext } from "../../../contexts/LoggedInContext";
 import { PokemonCard } from "../pokemonCard/PokemonCard";
 import { useHistory } from "react-router-dom";
 
 
 export function MyPokemons() {
-    const loggedInData = useContext(LoggedInContext);
+    const loggedIn = useContext(LoggedInContext);
     const history = useHistory();
 
-    if (loggedInData.loggedIn === false) {
+    if (loggedIn.loggedIn === false) {
         history.push("/");
     }
     return (

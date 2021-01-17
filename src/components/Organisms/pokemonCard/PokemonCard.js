@@ -8,7 +8,7 @@ export const PokemonCard = ({url}) => {
     useEffect(() => {
         const getPokemonData = async () => {
             try {
-                const response = await axios.get(`${url}`);
+                const response = await axios.get(url);
                 //console.log(response.data);
                 setPokemonData(response.data);
             }

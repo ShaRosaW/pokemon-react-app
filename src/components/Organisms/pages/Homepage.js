@@ -3,14 +3,14 @@ import axios from 'axios';
 import { PokemonCard } from "../pokemonCard/PokemonCard";
 import { NavButtons } from "../../Molecules/navigation/NavButtons";
 import './Homepage.css';
-import { LoggedInContext } from "../../Atoms/contexts/LoggedInContext";
+import { LoggedInContext } from "../../../contexts/LoggedInContext";
 import image from '../../../assets/pokemon-header.png'
 
 export const Homepage = () => {
     const [pokemonData, setPokemonData] = useState(null);
     const [offset, setOffset] = useState(0);
     const [status, setStatus] = useState("loading");
-    const loggedInData = useContext(LoggedInContext);
+    const loggedIn = useContext(LoggedInContext);
 
 
     useEffect(() => {
@@ -51,7 +51,7 @@ export const Homepage = () => {
                         Gotta catch 'em all!!
                         </h2>
                     <div>
-                        <button className="log-button" onClick={() => loggedInData.setLoggedIn(true)}>
+                        <button className="log-button" onClick={() => loggedIn.setLoggedIn(true)}>
                             Inloggen
                         </button>
                     </div>
